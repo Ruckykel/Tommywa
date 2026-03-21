@@ -47,6 +47,13 @@ const projects = [
         client: "Filling App",
         video: "/videos/video7.mp4",
     },
+    {
+        id: 8,
+        title: "Creative Short",
+        client: "Freelance",
+        video: "/videos/newvideo.MP4",
+        featured: true,
+    },
 ];
 
 export default function Portfolio() {
@@ -59,9 +66,9 @@ export default function Portfolio() {
                     <h2 className={styles.heading}>Latest Works</h2>
                 </div>
 
-                {/* Projects Grid — Top row (3) */}
+                {/* Projects Grid — Top row (4) */}
                 <div className={styles.gridTop}>
-                    {projects.slice(0, 3).map((project) => (
+                    {projects.slice(0, 4).map((project) => (
                         <div key={project.id} className={styles.card}>
                             <div className={styles.videoWrapper}>
                                 <video
@@ -117,7 +124,7 @@ export default function Portfolio() {
 
                 {/* Projects Grid — Bottom row (4) */}
                 <div className={styles.gridBottom}>
-                    {projects.slice(3).map((project) => (
+                    {projects.slice(4).map((project) => (
                         <div key={project.id} className={styles.card}>
                             <div className={styles.videoWrapper}>
                                 <video

@@ -16,31 +16,15 @@ export default function About() {
                         impression. Ready to start your next project?
                     </p>
 
-                    {/* Curved arrow */}
-                    <div className={styles.curvedArrow} aria-hidden="true">
-                        <svg
-                            width="80"
-                            height="80"
-                            viewBox="0 0 80 80"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M10 40C10 40 20 10 50 20C80 30 60 60 70 65"
-                                stroke="var(--text-muted)"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                fill="none"
-                            />
-                            <path
-                                d="M62 62L70 65L67 56"
-                                stroke="var(--text-muted)"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                fill="none"
-                            />
-                        </svg>
+                    {/* Bottom Left Logo */}
+                    <div className={styles.bottomLeftLogo}>
+                        <Image
+                            src="/images/tommylogo.PNG"
+                            alt="Tomiwa Ashade Logo"
+                            width={320}
+                            height={320}
+                            className={styles.extraLogo}
+                        />
                     </div>
                 </div>
 
@@ -152,6 +136,17 @@ export default function About() {
                                 that elevate every project.
                             </p>
                         </div>
+                    </div>
+
+                    {/* Bottom Right Image */}
+                    <div className={styles.bottomRightImg}>
+                        <Image
+                            src="/images/tommy4.png"
+                            alt="Tomiwa Ashade at work"
+                            width={320}
+                            height={240}
+                            className={styles.extraImg}
+                        />
                     </div>
                 </div>
             </div>
