@@ -10,8 +10,8 @@ export default function Navbar() {
                     <Image
                         src="/images/tommylogo.PNG"
                         alt="Tomiwa Ashade Logo"
-                        width={40}
-                        height={40}
+                        width={85}
+                        height={85}
                         className={styles.logoImg}
                         priority
                     />

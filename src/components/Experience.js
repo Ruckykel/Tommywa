@@ -28,14 +28,6 @@ const experiences = [
         description:
             "Shoot and edit video content for social media platforms, promotional materials, and internal communications. Capture worship highlights, sermons, and special events.",
         tags: ["Video Editing", "Sound Mixing"],
-        expanded: true,
-        images: [
-            "/images/exp-thumb-1.png",
-            "/images/exp-thumb-2.png",
-            "/images/exp-thumb-3.png",
-        ],
-        expandedDescription:
-            "From filming live worship services to crafting promotional campaigns, this ongoing role has shaped my creative approach — blending color correction, sound mixing, and motion graphics to improve viewer engagement across all platforms.",
     },
 ];
 
