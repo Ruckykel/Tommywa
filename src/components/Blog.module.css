@@ -1,0 +1,134 @@
+.blog {
+    padding: var(--space-4xl) 0;
+    padding-bottom: var(--space-4xl);
+    background: var(--bg-secondary);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-2xl);
+}
+
+/* ========== Header ========== */
+.header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.label {
+    display: inline-block;
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+    margin-bottom: var(--space-md);
+}
+
+.heading {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+/* ========== Posts Grid ========== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+/* Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.imageWrapper {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+/* Card Body */
+.cardBody {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.category {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+}
+
+.readTime {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.postTitle {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog {
+        padding: var(--space-3xl) 0;
+    }
+
+    .container {
+        padding: 0 var(--space-lg);
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}

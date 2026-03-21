@@ -1,0 +1,117 @@
+.ctaBanner {
+    padding: var(--space-2xl) 0;
+    background: var(--bg-primary);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-2xl);
+}
+
+.bannerWrapper {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background image */
+.bgImage {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* Content */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: var(--space-3xl) var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    max-width: 680px;
+}
+
+.label {
+    font-size: var(--text-xs);
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+.description {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: #ffffff;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.8);
+    padding-bottom: 2px;
+    margin-top: var(--space-sm);
+    transition: opacity var(--transition-fast), gap var(--transition-fast);
+}
+
+.cta:hover {
+    opacity: 0.8;
+    gap: var(--space-md);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .ctaBanner {
+        padding: var(--space-xl) 0;
+    }
+
+    .container {
+        padding: 0 var(--space-lg);
+    }
+
+    .bannerWrapper {
+        min-height: 300px;
+        border-radius: var(--radius-lg);
+    }
+
+    .content {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerWrapper {
+        min-height: 280px;
+    }
+}

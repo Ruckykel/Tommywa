@@ -1,0 +1,100 @@
+.contact {
+    padding: var(--space-4xl) 0;
+    padding-bottom: calc(var(--space-4xl) + var(--space-2xl));
+    background: var(--bg-primary);
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-2xl);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    max-width: 700px;
+}
+
+.description {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1.5px solid var(--text-primary);
+    padding-bottom: 2px;
+    margin-top: var(--space-sm);
+    transition: opacity var(--transition-fast), gap var(--transition-fast);
+}
+
+.cta:hover {
+    opacity: 0.7;
+    gap: var(--space-md);
+}
+
+/* ========== Social Links ========== */
+.socials {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    transition: background var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
+}
+
+.socialLink:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateY(-3px);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .contact {
+        padding: var(--space-3xl) 0;
+        padding-bottom: calc(var(--space-3xl) + var(--space-xl));
+    }
+
+    .container {
+        padding: 0 var(--space-lg);
+    }
+
+    .socials {
+        gap: var(--space-sm);
+    }
+
+    .socialLink {
+        width: 42px;
+        height: 42px;
+    }
+}
