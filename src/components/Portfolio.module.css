@@ -81,10 +81,51 @@
     opacity: 1;
     transition: opacity var(--transition-base);
     pointer-events: none;
+    z-index: 2;
 }
 
-.videoWrapper:hover .playOverlay {
+.isPlaying {
     opacity: 0;
+}
+
+.videoWrapper:hover .isPlaying {
+    opacity: 1;
+}
+
+.pauseBtn {
+    cursor: pointer;
+    pointer-events: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fullscreen button */
+.fullscreenBtn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 3;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.fullscreenBtn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.videoWrapper:hover .fullscreenBtn {
+    opacity: 1;
 }
 
 /* Card info */
@@ -135,5 +176,16 @@
     .gridBottom {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
+    }
+
+    .isPlaying {
+        opacity: 0.2;
+        /* slightly visible so users know they can tap */
+    }
+
+    .fullscreenBtn {
+        opacity: 1;
+        /* always visible on mobile */
+        background: rgba(0, 0, 0, 0.4);
     }
 }

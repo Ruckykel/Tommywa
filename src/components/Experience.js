@@ -141,6 +141,16 @@ export default function Experience() {
                         </div>
                     ))}
                 </div>
+
+                {/* Mobile CTA */}
+                <div className={styles.mobileCtaWrapper}>
+                    <a href="#contact" className={styles.bookCallMobile}>
+                        Book A Call
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
     );

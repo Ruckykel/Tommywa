@@ -1,7 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
     return (
         <header className={styles.header} id="navbar">
             <nav className={styles.nav}>
@@ -62,12 +69,28 @@ export default function Navbar() {
                 </a>
 
                 {/* Mobile Menu Button */}
-                <button className={styles.mobileMenuBtn} aria-label="Toggle menu" id="mobile-menu-toggle">
+                <button
+                    className={`${styles.mobileMenuBtn} ${isMenuOpen ? styles.menuOpenBtn : ""}`}
+                    aria-label="Toggle menu"
+                    id="mobile-menu-toggle"
+                    onClick={toggleMenu}
+                >
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
             </nav>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`${styles.mobileMenuOverlay} ${isMenuOpen ? styles.mobileMenuOpen : ""}`}>
+                <ul className={styles.mobileNavLinks}>
+                    <li><a href="#about" onClick={closeMenu}>About Me</a></li>
+                    <li><a href="#portfolio" onClick={closeMenu}>Portfolio</a></li>
+                    <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
+                    <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
+                    <li><a href="#contact" onClick={closeMenu} className={styles.mobileCta}>Book A Call</a></li>
+                </ul>
+            </div>
         </header>
     );
 }

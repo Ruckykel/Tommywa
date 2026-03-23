@@ -21,11 +21,11 @@ export default function Hero() {
                     {/* Stats */}
                     <div className={styles.stats}>
                         <div className={styles.statItem}>
-                            <span className={styles.statNumber}>+5</span>
+                            <span className={styles.statNumber}>5+</span>
                             <span className={styles.statLabel}>Years of experience</span>
                         </div>
                         <div className={styles.statItem}>
-                            <span className={styles.statNumber}>+50</span>
+                            <span className={styles.statNumber}>50+</span>
                             <span className={styles.statLabel}>Projects completed</span>
                         </div>
                     </div>
