@@ -205,7 +205,7 @@
     .content {
         grid-template-columns: 1fr;
         min-height: auto;
-        padding: var(--space-3xl) var(--space-lg);
+        padding: var(--space-3xl) var(--space-lg) 0;
         gap: var(--space-xl);
     }
 
@@ -214,10 +214,20 @@
         padding-right: 0;
         gap: var(--space-2xl);
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headingBlock {
+        order: 1;
     }
 
     .stats {
+        order: 2;
         justify-content: center;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .rightCol {
@@ -231,11 +241,7 @@
     }
 
     .scrollIndicator {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        justify-content: center;
-        margin-top: var(--space-xl);
+        display: none;
     }
 }
 

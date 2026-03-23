@@ -107,6 +107,8 @@ function VideoCard({ project }) {
                 video.requestFullscreen();
             } else if (video.webkitRequestFullscreen) {
                 video.webkitRequestFullscreen();
+            } else if (video.webkitEnterFullscreen) {
+                video.webkitEnterFullscreen();
             } else if (video.msRequestFullscreen) {
                 video.msRequestFullscreen();
             }

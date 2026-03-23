@@ -71,6 +71,18 @@
     display: block;
 }
 
+.video:fullscreen {
+    object-fit: contain;
+}
+
+.video:-webkit-full-screen {
+    object-fit: contain;
+}
+
+.video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+
 /* Play overlay */
 .playOverlay {
     position: absolute;
